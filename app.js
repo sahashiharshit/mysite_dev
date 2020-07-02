@@ -1,10 +1,11 @@
-import express from 'express';
+const express = require('express');
 //express app
 const app = express();
-
+const PORT = process.env.PORT || 3000;
 //Listening for requests
-app.listen(3000);
+app.listen(PORT);
 
-app.get('/', (res, req) => {
+app.get('/', (req, res) => {
+    res.send
     res.send("<p>Construction work in progress.</p>");
 });
