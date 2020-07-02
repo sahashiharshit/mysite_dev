@@ -6,6 +6,6 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT);
 
 app.get('/', (req, res) => {
-    res.send
+    
     res.send("<p>Construction work in progress.</p>");
 });
