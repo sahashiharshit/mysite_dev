@@ -1,0 +1,28 @@
+{
+  "name": "mysite_dev",
+  "version": "0.0.1",
+  "description": "This is my personal WebPage built by Node js in backend and React js in frontend.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahashiharshit/mysite_dev.git"
+  },
+  "keywords": [
+    "Typescript",
+    "nodejs",
+    "reactjs",
+    "personalpage"
+  ],
+  "author": "Harshit Sah",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sahashiharshit/mysite_dev/issues"
+  },
+  "homepage": "https://github.com/sahashiharshit/mysite_dev#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
