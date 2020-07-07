@@ -36,6 +36,11 @@ app.get("/about", (req, res) => {
     title: "About Me",
   });
 });
+app.get("/blog_tutorials", (req,res) =>{
+  res.render('tutorials',{
+    title:"Tutorials & blogs"
+  });
+});
 //404 page
 app.use((req, res) => {
   res.status(404).render("404");
