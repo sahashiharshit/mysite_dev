@@ -8,10 +8,10 @@ const app = express();
 // const router = express.Router();
 const PORT = process.env.PORT || 3000;
 
-
+app.use(express.static(__dirname +"/dist"));
+app.use(express.static(__dirname +"/assets"));
 // Listening for requests
 app.listen(PORT);
-
 
 // set the views 
 app.set("views", path.join(__dirname, "views"));
@@ -19,31 +19,11 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "pug");
 //index page
 app.get("/", (req, res) => {
-  res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
+  // res.setHeader("Set-Cookie", "HttpOnly;Secure;SameSite=Strict");
   res.render('home', {
     title: "Home",
   });
 });
 
-app.get("/portfolio", (req, res) =>{
-res.render('portfolio',{
-  title:"Portfolio",
-});
-});
-//about WebPage
-app.get("/about", (req, res) => {
-  res.render('about', {
-    title: "About Me",
-  });
-});
-app.get("/blog_tutorials", (req,res) =>{
-  res.render('tutorials',{
-    title:"Tutorials & blogs"
-  });
-});
-//404 page
-app.use((req, res) => {
-  res.status(404).render("404");
-});
 
 // module.exports = router
